@@ -10,12 +10,17 @@ html
       title Natours | #{title}
   
   body
-  //HEADER
-  header .header 
-    nav.nav.nav--tours 
-        a.nav_-el(href='#') All tours 
-    .header__logo 
-        img(src='img/logo-white.png', alt ='Natours logo')
-    nav.nav.nav--user 
-        button.nav__el Log in
-        button.nav__el.nav__el--cta sign up        
+    //HEADER
+    include _header 
+        
+    // CONTENT
+    block content
+      h1 This is a placeholder heading
+      
+    // FOOTER
+    include _footer
+    
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+    //- script(src='/js/mapbox.js')
+    //- script(src='/js/login.js')
+    script(src='/js/bundle.js')   
